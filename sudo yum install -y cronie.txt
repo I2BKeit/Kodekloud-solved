@@ -1,0 +1,8 @@
+sudo yum install -y cronie
+
+sudo systemctl start crond.service
+sudo systemctl status crond.service
+sudo crontab -e
+*/5 * * * * echo hello > /tmp/cron_text
+sudo crontab -l
+sudo crontab -u root -l
